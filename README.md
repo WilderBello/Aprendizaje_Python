@@ -1,2 +1,2 @@
-# Aprendizaje_Flask
-Aprendizaje de Python - Flask en Udemy
+# Aprendizaje_Python
+Aprendizaje de Python en Udemy
