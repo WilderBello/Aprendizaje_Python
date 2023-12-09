@@ -1,0 +1,25 @@
+Crear entorno virtual: pipenv shell
+Instalar Django: pipenv Install django
+Verificar instalacionn de Django: django-admin --version
+Crear proyecto en Django: django-admin startproject mysite . > misite es el proyecto y '.' es para no anidar carpetas
+Ejecutar servidor: python manage.py runserver 8080 > 8080 es el puerto especificado 
+Crear apps en Django: python manage.py startapp myapp > myapp es el nombre de la app
+Para el primer hola mundo se modifica myapp.views creando una funcion
+add la ruta en mysite.urls y creamos urls.py en la app para tener organizado todo.
+Revisamos migraciones: python manage.py makemigrations myapp > revisa migraciones de myapp
+Ejecutamos las migraciones: python manage.py migrate
+Crear modelo o tabla en models.py de cada app 
+Conectamos el proyecto principal con el modelo para que lo detecte mediante settings.py en INSTALLED_APPS
+Para agregar datos a la DB ejecutamos un comando mediante shell con python manage.py shell
+
+
+## manage.py ayuda a ejecutar comandos administrativos.
+## mysite es el codigo fuente del proyecto.
+## db.sqlite3 es una base de datos comun en desarrollo
+## init.py es indicador de modulo de python
+## settings.py contiene configuraciones del proyecto como las URLs que debe consultar el proyecto o debug.
+### en myapp views es lo que se va a mostrar
+### admin permite agregar apps al panel administrador de django.
+### apps es un equivalente a settings pero en la app.
+### models permite crear clases que se van a convertir en tablas de sql y por ello se crean las migraciones.
+### tests permite crear test para revisar requerimientos
