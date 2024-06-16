@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "principal",
+    "proyecto_apm",
+    "proyecto_robotica",
+    "proyecto_sena",
 ]
 
 MIDDLEWARE = [
@@ -55,7 +58,7 @@ ROOT_URLCONF = "portafolio.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['principal/templates'],
+        "DIRS": ['principal/templates', 'proyecto_apm/templates', 'proyecto_robotica/templates', 'proyecto_sena/templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -122,6 +125,9 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     BASE_DIR / "principal" / "static",
+    BASE_DIR / "proyecto_apm" / "static",
+    BASE_DIR / "proyecto_robotica" / "static",
+    BASE_DIR / "proyecto_sena" / "static",
 ]
 
 # Default primary key field type
