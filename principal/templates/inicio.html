@@ -1,1 +1,79 @@
-<h1>Inicio</h1>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/principal_style.css' %}">
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <header class="flex justify-center bg-green-600 text-white p-0">
+        <p>Bienvenido a Mi Portafolio</p>
+    </header>
+
+    <div class="flex items-center bg-blue-400 p-2">
+        <div>
+            <img src="{% static 'img/foto.jpg' %}" alt="Mi Foto" class="w-32 h-auto rounded-full md:mr-4 md:mb-0">
+        </div>
+        <div class="p-4">
+            <h1 class="text-4xl">Wilder Bello </h1>
+            <p>Parrafo de presentacion</p>
+        </div>
+    </div>
+
+    <label class="flex justify-center p-2">
+        <span class="sr-only">Search</span>
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><!-- ... --></svg>
+        </span>
+        <input
+            class="placeholder:italic placeholder:text-slate-400 block bg-white w-1/2 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+            placeholder="Search for anything..." type="text" name="search" />
+    </label>
+
+    <main class="relative m-auto p-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+                class="group bg-white p-4 rounded shadow hover:shadow-lg hover:bg-green-600 transition-shadow duration-300">
+                <!-- url 'proyecto1' -->
+                <a href="{% url 'home' %}">
+                    <h2 class="text-2xl font-bold mb-2 group-hover:text-white">Proyecto 1</h2>
+                    <p class="text-gray-700 group-hover:text-white">Descripción breve del proyecto 1.</p>
+                </a>
+            </div>
+            <div class="bg-white p-4 rounded shadow hover:shadow-lg transition-shadow duration-300">
+                <!-- url 'proyecto2' -->
+                <a href="{% url 'home' %}">
+                    <h2 class="text-2xl font-bold mb-2">Proyecto 2</h2>
+                    <p class="text-gray-700">Descripción breve del proyecto 2.</p>
+                </a>
+            </div>
+            <div class="bg-white p-4 rounded shadow hover:shadow-lg transition-shadow duration-300">
+                <!-- url 'proyecto3' -->
+                <a href="{% url 'home' %}">
+                    <h2 class="text-2xl font-bold mb-2">Proyecto 3</h2>
+                    <p class="text-gray-700">Descripción breve del proyecto 3.</p>
+                </a>
+            </div>
+            <div class="bg-white p-4 rounded shadow hover:shadow-lg transition-shadow duration-300">
+                <!-- url 'proyecto4' -->
+                <a href="{% url 'home' %}">
+                    <h2 class="text-2xl font-bold mb-2">Proyecto 4</h2>
+                    <p class="text-gray-700">Descripción breve del proyecto 4.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <div class="p-4"></div>
+
+    <footer class="fixed bottom-0 w-full bg-gray-800 text-white p-0 text-center">
+        <p>© 2024 Mi Portafolio. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
