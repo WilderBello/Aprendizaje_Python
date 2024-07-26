@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "principal",
+    "proyecto_apm",
+    "proyecto_robotica",
+    "proyecto_sena",
 ]
 
 MIDDLEWARE = [
@@ -54,7 +58,7 @@ ROOT_URLCONF = "portafolio.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['principal/templates', 'proyecto_apm/templates', 'proyecto_robotica/templates', 'proyecto_sena/templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -116,6 +120,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+
+# Cargar archivos static
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    BASE_DIR / "principal" / "static",
+    BASE_DIR / "proyecto_apm" / "static",
+    BASE_DIR / "proyecto_robotica" / "static",
+    BASE_DIR / "proyecto_sena" / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

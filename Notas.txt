@@ -1,6 +1,6 @@
 Crear entorno virtual: pipenv shell
 Instalar Django: pipenv Install django
-Verificar instalacionn de Django: django-admin --version
+Verificar instalacion de Django: django-admin --version
 Crear proyecto en Django: django-admin startproject mysite . > misite es el proyecto y '.' es para no anidar carpetas
 Ejecutar servidor: python manage.py runserver 8000 > 8000 es el puerto especificado 
 Crear apps en Django: python manage.py startapp myapp > myapp es el nombre de la app
@@ -23,3 +23,8 @@ Para agregar datos a la DB ejecutamos un comando mediante shell con python manag
 ### apps es un equivalente a settings pero en la app.
 ### models permite crear clases que se van a convertir en tablas de sql y por ello se crean las migraciones.
 ### tests permite crear test para revisar requerimientos
+
+crear css a partir de tailwind > npm run build:css
+
+npm run build:css
+python manage.py runserver
