@@ -24,7 +24,7 @@ Para agregar datos a la DB ejecutamos un comando mediante shell con python manag
 ### models permite crear clases que se van a convertir en tablas de sql y por ello se crean las migraciones.
 ### tests permite crear test para revisar requerimientos
 
-crear css a partir de tailwind > npm run build:css
+crear css a partir de tailwind(package.json) > npm run build:css
 
 npm run build:css
 python manage.py runserver
